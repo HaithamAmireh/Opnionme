@@ -3,9 +3,9 @@
 {% block title%} View List{% endblock %}
 
 {% block content %}
-    <h1>
+    <h2>
         {{ls.name}}
-    </h1>
+    </h2>
     <form action="#" method="POST">
         {% csrf_token %}
             {% for item in ls.item_set.all %}
