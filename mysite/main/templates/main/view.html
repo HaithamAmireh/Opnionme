@@ -1,0 +1,14 @@
+{% extends "main/base.html"%}
+
+
+{% block title %}
+View
+{% endblock %}
+
+{% block content %}
+    {% for wl in user.watchlist.all %}
+        <p class = "view-list">
+            <a href="/{{wl.id}}">{{wl.name}}</a>
+        </p>
+    {% endfor %}
+{% endblock %}

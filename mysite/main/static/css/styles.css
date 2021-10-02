@@ -1,3 +1,16 @@
+body{
+    overflow-x: hidden;
+}
 h2{
     color:rgb(204, 97, 253);
+}
+.btn{
+    background-color:#28a745;
+    font-weight: 500;
+}
+.view-list{
+    font-size: 20px;
+}
+label{
+    font-weight: 600;
 }

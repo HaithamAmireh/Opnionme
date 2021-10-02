@@ -4,13 +4,13 @@
 
 {% block content %}
     <h2>
-        Create Page
+        Create List
     </h2>
     <form action="/create/" method = "POST" class = "form-group">
         {% csrf_token %}
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <button type = "submit" name = "save" class = "btn btn-success"> Create New</button>
+                <button type = "submit" name = "save" class = "btn"> Create New</button>
             </div>
             {{form.name}}
         </div>
