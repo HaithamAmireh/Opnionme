@@ -4,6 +4,7 @@
 
 {% load crispy_forms_tags %}
 
+    {% block header %}Register to Opnionme{% endblock %}
 {% block content %}
 <form action="/login/" method="POST" class = "form-group">
     {% csrf_token %}

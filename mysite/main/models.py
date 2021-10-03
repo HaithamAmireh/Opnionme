@@ -13,6 +13,7 @@ class WatchList(models.Model):
 class Item(models.Model):
     watchlist = models.ForeignKey(WatchList, on_delete=models.CASCADE)
     text = models.CharField(max_length=300)
+    description = models.TextField(blank=True, max_length=300)
     complete = models.BooleanField()
 
     def __str__(self):

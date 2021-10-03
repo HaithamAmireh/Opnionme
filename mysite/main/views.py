@@ -20,8 +20,9 @@ def index(response, id):
                     item.save()
             elif response.POST.get("newItem"):
                 txt = response.POST.get("new")
-                if len(txt) > 2:
-                    ls.item_set.create(text = txt, complete = False)
+                desc = response.POST.get("details")
+                if len(txt) > 2 and len(desc) > 1:
+                    ls.item_set.create(text = txt, description = desc ,complete = False)
                 else:
                     print("invalid input")
         return render(response,"main/list.html",{"ls":ls})

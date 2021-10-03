@@ -3,14 +3,18 @@
 
 {% load crispy_forms_tags %}
 
+    {% block header %}Log in{% endblock %}
 {% block content %}
+<div class="log-in">
 <form  method="POST" class= "form-group">
     {% csrf_token %}
-    {{form|crispy}}
-    <p>Don't have an account? Create one
-        <a href="/register">here</a>
-    </p>
-    <button type = "submit" class="btn">Login</button>
-</form>
+
+        {{form|crispy}}
+        <p>Don't have an account? Create one
+            <a href="/register">here</a>
+        </p>
+        <button type = "submit" class="btn">Login</button>
+    </form>
+</div>
 
 {% endblock %}

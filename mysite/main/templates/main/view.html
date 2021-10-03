@@ -5,6 +5,7 @@
 View
 {% endblock %}
 
+{% block header %}My Lists{% endblock %}
 {% block content %}
     {% for wl in user.watchlist.all %}
         <p class = "view-list">

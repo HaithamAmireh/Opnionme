@@ -2,10 +2,9 @@
 
 {% block title%} View List{% endblock %}
 
+
+{% block header %}{{ls.name}}{% endblock %}
 {% block content %}
-    <h2>
-        {{ls.name}}
-    </h2>
     <form action="#" method="POST">
         {% csrf_token %}
             {% for item in ls.item_set.all %}
@@ -20,13 +19,15 @@
                         </div>
                     </div>
                     <input type="text" value="{{item.text}}" class = "form-control">
+                    <input type="text" value="{{item.description}}" class = "form-control">
                 </div>
             {% endfor %}
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <button type = "submit" name = "newItem" value = "newItem" class = "btn btn-success">Add Item</button>
             </div>
-            <input type="text" name="new">
+            <input type="text" name="new" placeholder="New Item">
+            <input type="text" name="details" placeholder="Add description">
         </div>
         <button type = "submit" name = "save" value = "save" class = "btn btn-success">Save</button>
     </form>
